@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>Build // localhost : Seoul — Banner 960×540</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@500;700&family=Pretendard:wght@600;800&display=swap" rel="stylesheet">
+<style>
+  /* === 캡처용 컨테이너: 정확히 960x540 === */
+  :root {
+    --ms-red:    #F25022;
+    --ms-green:  #7FBA00;
+    --ms-blue:   #00A4EF;
+    --ms-yellow: #FFB900;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: #1a1a1a;
+    font-family: 'Pretendard', -apple-system, 'Apple SD Gothic Neo', sans-serif;
+  }
+  body {
+    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh;
+  }
+
+  .banner {
+    width: 960px;
+    height: 540px;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    background:
+      /* 우측 야경 분위기 비네팅 */
+      radial-gradient(900px 600px at 75% 40%, rgba(20,40,80,.55), transparent 60%),
+      /* 좌측 어둠 */
+      radial-gradient(700px 600px at 10% 30%, rgba(0,0,0,.7), transparent 70%),
+      /* 베이스 그라데이션 */
+      linear-gradient(180deg, #050810 0%, #0a1226 50%, #050810 100%);
+    image-rendering: pixelated;
+  }
+
+  /* 픽셀 그리드 오버레이 */
+  .banner::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size: 12px 12px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* 우측 도시 야경 느낌 — 작은 빛점 */
+  .city-lights {
+    position: absolute;
+    top: 60px; right: 0;
+    width: 460px; height: 320px;
+    background:
+      radial-gradient(2px 2px at 30px 40px,  rgba(255,200,120,.7), transparent),
+      radial-gradient(2px 2px at 80px 90px,  rgba(255,200,120,.5), transparent),
+      radial-gradient(2px 2px at 140px 30px, rgba(180,220,255,.6), transparent),
+      radial-gradient(2px 2px at 200px 120px,rgba(255,200,120,.6), transparent),
+      radial-gradient(2px 2px at 260px 60px, rgba(255,200,120,.4), transparent),
+      radial-gradient(2px 2px at 320px 100px,rgba(180,220,255,.5), transparent),
+      radial-gradient(2px 2px at 380px 50px, rgba(255,200,120,.6), transparent),
+      radial-gradient(2px 2px at 60px 180px, rgba(255,200,120,.5), transparent),
+      radial-gradient(2px 2px at 180px 200px,rgba(255,200,120,.6), transparent),
+      radial-gradient(2px 2px at 290px 220px,rgba(180,220,255,.4), transparent),
+      radial-gradient(2px 2px at 410px 180px,rgba(255,200,120,.6), transparent),
+      radial-gradient(3px 3px at 350px 270px,rgba(255,160,80,.5), transparent);
+    z-index: 1;
+  }
+
+  /* N 서울타워 실루엣 */
+  .seoul-tower {
+    position: absolute;
+    top: 70px; right: 130px;
+    width: 4px; height: 90px;
+    background: rgba(255,255,255,.15);
+    z-index: 1;
+  }
+  .seoul-tower::before {
+    content: ""; position: absolute;
+    width: 14px; height: 22px;
+    background: rgba(255,255,255,.2);
+    top: -22px; left: -5px;
+    border-radius: 2px;
+  }
+  .seoul-tower::after {
+    content: ""; position: absolute;
+    width: 2px; height: 18px;
+    background: rgba(255,140,80,.6);
+    top: -40px; left: 1px;
+    box-shadow: 0 0 6px rgba(255,140,80,.8);
+  }
+
+  /* === 상단 좌측: 노란 배지 === */
+  .badge {
+    position: absolute;
+    top: 24px; left: 28px;
+    background: #FFD24D;
+    color: #1a1304;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    z-index: 3;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.3) inset;
+  }
+
+  /* === 상단 우측: Microsoft × AI 놀이터 === */
+  .topright {
+    position: absolute;
+    top: 28px; right: 28px;
+    display: flex; align-items: center; gap: 14px;
+    z-index: 3;
+    font-size: 22px; font-weight: 600;
+  }
+  .ms-logo {
+    display: inline-grid;
+    grid-template-columns: 14px 14px;
+    grid-template-rows: 14px 14px;
+    gap: 2px;
+  }
+  .ms-logo span { display: block; }
+  .ms-logo .r { background: var(--ms-red); }
+  .ms-logo .g { background: var(--ms-green); }
+  .ms-logo .b { background: var(--ms-blue); }
+  .ms-logo .y { background: var(--ms-yellow); }
+  .x-mark { color: #fff; opacity: .85; font-size: 18px; }
+  .ai-logo {
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .ai-controller {
+    display: inline-grid;
+    grid-template-columns: 8px 8px 8px;
+    grid-template-rows: 8px 8px;
+    gap: 1px;
+  }
+  .ai-controller span { display:block; border-radius: 1px; }
+
+  /* === 부제 === */
+  .subtitle {
+    position: absolute;
+    top: 110px; left: 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    color: var(--ms-yellow);
+    font-size: 18px;
+    letter-spacing: .04em;
+    z-index: 3;
+    text-shadow: 0 0 8px rgba(255,185,0,.35);
+  }
+
+  /* === BUILD / @LOCALHOST 픽셀 타이틀 === */
+  .title-block {
+    position: absolute;
+    top: 145px; left: 28px;
+    z-index: 3;
+  }
+  .pixel-title {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 64px;
+    line-height: 1.05;
+    letter-spacing: 6px;
+    margin: 0;
+    text-shadow:
+      3px 3px 0 rgba(0,0,0,.7),
+      0 0 12px rgba(0,164,239,.25);
+  }
+  .pixel-title.small { font-size: 50px; margin-top: 14px; letter-spacing: 4px; }
+  .pixel-title .b1 { color: var(--ms-blue); }
+  .pixel-title .b2 { color: var(--ms-red); }
+  .pixel-title .b3 { color: var(--ms-yellow); }
+  .pixel-title .b4 { color: var(--ms-green); }
+  .pixel-title .b5 { color: var(--ms-yellow); }
+
+  /* === 4색 구분 라인 === */
+  .color-bar {
+    position: absolute;
+    top: 380px; left: 28px;
+    width: 420px; height: 6px;
+    background: linear-gradient(90deg,
+      var(--ms-red) 0 25%,
+      var(--ms-green) 25% 50%,
+      var(--ms-blue) 50% 75%,
+      var(--ms-yellow) 75% 100%);
+    z-index: 3;
+  }
+
+  /* === 일시 / 장소 === */
+  .info {
+    position: absolute;
+    top: 400px; left: 28px;
+    z-index: 3;
+  }
+  .info .when {
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -.01em;
+  }
+  .info .where {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 6px 0 0;
+    color: #f4f6fb;
+  }
+
+  /* === 하단 픽셀 스카이라인 === */
+  .skyline {
+    position: absolute;
+    left: 0; right: 0; bottom: 38px;
+    height: 60px;
+    display: flex; align-items: flex-end;
+    gap: 0;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .skyline .blk {
+    width: 14px;
+    margin-right: 1px;
+    image-rendering: pixelated;
+  }
+
+  /* 광화문 가운데 픽셀 아이콘 */
+  .gwanghwamun {
+    position: absolute;
+    left: 50%; bottom: 60px;
+    transform: translateX(-50%);
+    width: 70px; height: 36px;
+    z-index: 3;
+  }
+  .gwanghwamun .roof {
+    width: 70px; height: 14px;
+    background: var(--ms-blue);
+    clip-path: polygon(0 100%, 10% 0, 90% 0, 100% 100%);
+  }
+  .gwanghwamun .body {
+    width: 60px; height: 22px;
+    margin: 0 auto;
+    background: var(--ms-yellow);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    padding: 2px;
+  }
+  .gwanghwamun .body span {
+    background: rgba(0,0,0,.35);
+  }
+
+  /* === 하단 텍스트 스트립 === */
+  .bottom-strip {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 32px;
+    display: flex; align-items: center; justify-content: center; gap: 14px;
+    font-size: 13px;
+    font-family: 'JetBrains Mono', monospace;
+    color: #cfd5e8;
+    z-index: 4;
+    background: rgba(0,0,0,.4);
+  }
+  .bottom-strip .ms-logo { transform: scale(.7); transform-origin: left center; }
+  .bottom-strip .divider { color: #444; }
+  .bottom-strip .build  { color: #fff; font-weight: 700; }
+  .bottom-strip .c-blue { color: var(--ms-blue); }
+  .bottom-strip .c-green{ color: var(--ms-green); }
+  .bottom-strip .c-red  { color: var(--ms-red); }
+  .bottom-strip .c-yel  { color: var(--ms-yellow); }
+</style>
+</head>
+<body>
+
+<div class="banner" id="banner">
+
+  <!-- 야경 효과 -->
+  <div class="city-lights"></div>
+  <div class="seoul-tower"></div>
+
+  <!-- 상단 좌측 배지 -->
+  <div class="badge">AI 놀이터 여름 밋업</div>
+
+  <!-- 상단 우측 로고 영역 -->
+  <div class="topright">
+    <span class="ms-logo">
+      <span class="r"></span><span class="g"></span>
+      <span class="b"></span><span class="y"></span>
+    </span>
+    <span style="font-weight:600;">Microsoft</span>
+    <span class="x-mark">✕</span>
+    <span class="ai-logo">
+      <span class="ai-controller">
+        <span style="background:#F25022"></span><span style="background:#7FBA00"></span><span style="background:#00A4EF"></span>
+        <span style="background:#FFB900"></span><span style="background:#7FBA00"></span><span style="background:#F25022"></span>
+      </span>
+      <span style="font-weight:700;">AI 놀이터</span>
+    </span>
+  </div>
+
+  <!-- 부제 -->
+  <div class="subtitle">MICROSOFT BUILD //LOCALHOST:SEOUL</div>
+
+  <!-- 타이틀 -->
+  <div class="title-block">
+    <div class="pixel-title">
+      <span class="b1">B</span><span class="b2">U</span><span class="b3">I</span><span class="b4">L</span><span class="b5">D</span>
+    </div>
+    <div class="pixel-title small">
+      <span class="b2">@</span><span class="b1">L</span><span class="b3">O</span><span class="b4">C</span><span class="b2">A</span><span class="b1">L</span><span class="b3">H</span><span class="b4">O</span><span class="b2">S</span><span class="b1">T</span>
+    </div>
+  </div>
+
+  <!-- 4색 라인 -->
+  <div class="color-bar"></div>
+
+  <!-- 일시/장소 -->
+  <div class="info">
+    <p class="when">2026년 6월 14일(일) 오후 1시~6시</p>
+    <p class="where">한국 마이크로소프트 13층</p>
+  </div>
+
+  <!-- 광화문 픽셀 아이콘 -->
+  <div class="gwanghwamun">
+    <div class="roof"></div>
+    <div class="body">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- 픽셀 스카이라인 (JS로 동적 생성) -->
+  <div class="skyline" id="skyline"></div>
+
+  <!-- 하단 스트립 -->
+  <div class="bottom-strip">
+    <span class="ms-logo">
+      <span class="r"></span><span class="g"></span>
+      <span class="b"></span><span class="y"></span>
+    </span>
+    <span class="build">Microsoft Build 2026</span>
+    <span class="divider">|</span>
+    <span class="c-blue">Real Code</span>
+    <span class="divider">|</span>
+    <span class="c-green">Real Systems</span>
+    <span class="divider">|</span>
+    <span class="c-red">Real Workflows</span>
+    <span class="divider">|</span>
+    <span class="c-yel">Real Community</span>
+  </div>
+
+</div>
+
+<script>
+  // 픽셀 스카이라인 자동 생성: 960px / 15px ≈ 64 빌딩
+  const skyline = document.getElementById('skyline');
+  const colors = ['#F25022', '#7FBA00', '#00A4EF', '#FFB900'];
+  const N = 64;
+  let html = '';
+  for (let i = 0; i < N; i++) {
+    // 가운데(광화문) 영역은 비움
+    if (i > 26 && i < 38) {
+      html += `<div class="blk" style="height:0"></div>`;
+      continue;
+    }
+    const h = 12 + Math.floor(Math.abs(Math.sin(i * 1.3) * 40)) + (i % 5) * 4;
+    const c = colors[i % 4];
+    // 픽셀 창문 패턴
+    const rows = Math.max(2, Math.floor(h / 8));
+    let cells = '';
+    for (let r = 0; r < rows; r++) {
+      cells += `<div style="height:7px; margin-bottom:1px; background:${c}; box-shadow: inset 0 0 0 1px rgba(0,0,0,.35);"></div>`;
+    }
+    html += `<div class="blk" style="height:${h}px">${cells}</div>`;
+  }
+  skyline.innerHTML = html;
+</script>
+
+</body>
+</html>

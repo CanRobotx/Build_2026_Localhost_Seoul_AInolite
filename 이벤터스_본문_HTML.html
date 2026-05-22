@@ -1,0 +1,299 @@
+<!--
+============================================================
+  이벤터스 에디터 전용 HTML (인라인 스타일 + 테이블 레이아웃)
+  사용법:
+  1) 이벤터스 본문 우측 하단의 [HTML] 탭 클릭
+  2) 본 파일의 <body> 내부 전체를 복사 → 붙여넣기
+  3) [Editor] 탭으로 돌아가서 미리보기 확인
+  4) 이미지는 먼저 에디터 툴바의 '사진' 버튼으로 업로드 후
+     생성된 URL을 본문의 <img src="여기">에 교체
+  주의:
+  - <style>, class, 외부 폰트, grid/flex, sticky는 이벤터스가 제거합니다.
+  - 본 파일은 모두 인라인 style + table 기반으로 작성되어 호환됩니다.
+============================================================
+-->
+<div style="max-width:780px;margin:0 auto;background:#0c1020;color:#e8ecf8;font-family:'Pretendard','Apple SD Gothic Neo','맑은 고딕',sans-serif;line-height:1.65;padding:0;">
+
+  <!-- ========== 1) 배너 이미지 ========== -->
+  <!-- ↓↓↓ 이벤터스에 먼저 업로드한 배너 URL로 교체하세요 ↓↓↓ -->
+  <p style="margin:0;">
+    <img src="배너이미지_업로드후_URL_교체"
+         alt="Build // localhost : Seoul — 2026년 6월 14일(일)"
+         style="width:100%;height:auto;display:block;border:0;" />
+  </p>
+
+  <!-- ========== 2) 핵심 정보 박스 (테이블 레이아웃) ========== -->
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+         style="width:100%;background:#131726;border:1px solid #1f2438;border-collapse:separate;margin:0 0 28px;">
+    <tr>
+      <td style="padding:18px 20px;width:50%;vertical-align:top;border-right:1px solid #1f2438;border-bottom:1px solid #1f2438;">
+        <div style="font-family:Consolas,monospace;font-size:11px;color:#9aa3bd;letter-spacing:.05em;margin-bottom:4px;">DATE</div>
+        <div style="font-weight:700;font-size:15px;color:#fff;">2026.06.14 (일) 13:00 – 18:00</div>
+      </td>
+      <td style="padding:18px 20px;width:50%;vertical-align:top;border-bottom:1px solid #1f2438;">
+        <div style="font-family:Consolas,monospace;font-size:11px;color:#9aa3bd;letter-spacing:.05em;margin-bottom:4px;">VENUE</div>
+        <div style="font-weight:700;font-size:15px;color:#fff;">한국 마이크로소프트 13층 제주룸<br/>서울 종로구 종로1길 50</div>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:18px 20px;vertical-align:top;border-right:1px solid #1f2438;">
+        <div style="font-family:Consolas,monospace;font-size:11px;color:#9aa3bd;letter-spacing:.05em;margin-bottom:4px;">PRICE</div>
+        <div style="font-weight:700;font-size:15px;color:#fff;">무료 / 오프라인 전용</div>
+      </td>
+      <td style="padding:18px 20px;vertical-align:top;">
+        <div style="font-family:Consolas,monospace;font-size:11px;color:#9aa3bd;letter-spacing:.05em;margin-bottom:4px;">SEATS</div>
+        <div style="font-weight:700;font-size:15px;color:#fff;">선착순 마감 예정</div>
+      </td>
+    </tr>
+  </table>
+
+  <!-- ========== 3) ABOUT ========== -->
+  <div style="padding:0 20px 8px;">
+    <div style="display:inline-block;font-family:Consolas,monospace;font-size:12px;color:#0c1020;background:#7FBA00;padding:4px 10px;font-weight:700;letter-spacing:.04em;margin-bottom:14px;">// ABOUT</div>
+    <h2 style="font-size:26px;margin:0 0 14px;color:#fff;line-height:1.35;">
+      <span style="color:#FFB900;">코드</span>로 놀고, <span style="color:#FFB900;">커뮤니티</span>로 연결되는 하루
+    </h2>
+    <p style="color:#cfd5e8;margin:0 0 16px;">
+      Microsoft Build의 진짜 재미는, 그 다음 날 우리 동네에서 시작됩니다.<br/>
+      무거운 기술 발표를 가볍게, 어려운 개념을 즐겁게 — “AI 놀이터” 답게 풀어드릴게요.<br/>
+      개발자도, 비개발자도, 그냥 궁금한 분도 모두 환영합니다.
+    </p>
+    <div style="padding:14px 18px;border-left:4px solid #FFB900;background:rgba(255,185,0,0.08);font-weight:500;color:#fff;">
+      한 줄 요약 — 미국에서 발표된 최신 AI / 개발 기술을, 서울에서 우리 식대로 다시 풀어보는 커뮤니티 파티.
+    </div>
+  </div>
+
+  <hr style="border:0;border-top:1px dashed #1f2438;margin:36px 20px;" />
+
+  <!-- ========== 4) TECH SCOPE ========== -->
+  <div style="padding:0 20px 8px;">
+    <div style="display:inline-block;font-family:Consolas,monospace;font-size:12px;color:#04222e;background:#00A4EF;padding:4px 10px;font-weight:700;letter-spacing:.04em;margin-bottom:14px;">// TECH SCOPE</div>
+    <h2 style="font-size:24px;margin:0 0 14px;color:#fff;">이번 행사에서 다룰 <span style="color:#FFB900;">기술 범위</span></h2>
+    <p style="color:#9aa3bd;margin:0 0 20px;">
+      Microsoft Build <span style="font-family:Consolas,monospace;">//local host</span> 공식 카탈로그 중 일부를 선별해 다룹니다.
+      세부 세션·시간표는 본 행사 종료 후 순차 공개됩니다.
+    </p>
+
+    <table role="presentation" cellpadding="0" cellspacing="8" border="0" style="width:100%;border-collapse:separate;">
+      <tr>
+        <td style="background:#131726;border:1px solid #1f2438;padding:14px;width:33%;vertical-align:top;">
+          <div style="font-weight:700;color:#fff;margin-bottom:4px;"><span style="display:inline-block;width:10px;height:10px;background:#F25022;margin-right:8px;"></span>개발 도구 &amp; 워크플로우 자동화</div>
+          <div style="color:#9aa3bd;font-size:13px;">GitHub Copilot, Visual Studio, CLI 기반 에이전트 워크플로우</div>
+        </td>
+        <td style="background:#131726;border:1px solid #1f2438;padding:14px;width:33%;vertical-align:top;">
+          <div style="font-weight:700;color:#fff;margin-bottom:4px;"><span style="display:inline-block;width:10px;height:10px;background:#7FBA00;margin-right:8px;"></span>클라우드 플랫폼 &amp; 데이터</div>
+          <div style="color:#9aa3bd;font-size:13px;">Azure 기반 앱 배포, AI 친화형 데이터 설계</div>
+        </td>
+        <td style="background:#131726;border:1px solid #1f2438;padding:14px;width:33%;vertical-align:top;">
+          <div style="font-weight:700;color:#fff;margin-bottom:4px;"><span style="display:inline-block;width:10px;height:10px;background:#00A4EF;margin-right:8px;"></span>모델 활용 &amp; 통합</div>
+          <div style="color:#9aa3bd;font-size:13px;">Microsoft Foundry 기반 모델 선택, 통합, 평가</div>
+        </td>
+      </tr>
+      <tr>
+        <td style="background:#131726;border:1px solid #1f2438;padding:14px;vertical-align:top;">
+          <div style="font-weight:700;color:#fff;margin-bottom:4px;"><span style="display:inline-block;width:10px;height:10px;background:#FFB900;margin-right:8px;"></span>에이전트 앱 설계 &amp; 운영</div>
+          <div style="color:#9aa3bd;font-size:13px;">단일/멀티 에이전트, 엔터프라이즈 에이전트 라이프사이클</div>
+        </td>
+        <td style="background:#131726;border:1px solid #1f2438;padding:14px;vertical-align:top;">
+          <div style="font-weight:700;color:#fff;margin-bottom:4px;"><span style="display:inline-block;width:10px;height:10px;background:#F25022;margin-right:8px;"></span>관측성 · 보안 · 책임 있는 AI</div>
+          <div style="color:#9aa3bd;font-size:13px;">프로덕션 환경에서의 평가, 모니터링, 안전성</div>
+        </td>
+        <td style="background:#131726;border:1px solid #1f2438;padding:14px;vertical-align:top;">
+          <div style="font-weight:700;color:#fff;margin-bottom:4px;"><span style="display:inline-block;width:10px;height:10px;background:#7FBA00;margin-right:8px;"></span>실습형 핸즈온 랩</div>
+          <div style="color:#9aa3bd;font-size:13px;">바로 따라 하며 결과물을 만드는 체험형 세션</div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" style="background:#131726;border:1px solid #1f2438;padding:14px;vertical-align:top;">
+          <div style="font-weight:700;color:#fff;margin-bottom:4px;"><span style="display:inline-block;width:10px;height:10px;background:#00A4EF;margin-right:8px;"></span>비개발자 활용 트랙</div>
+          <div style="color:#9aa3bd;font-size:13px;">Copilot Studio, Power Platform 등 코드 없이 만드는 AI</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <hr style="border:0;border-top:1px dashed #1f2438;margin:36px 20px;" />
+
+  <!-- ========== 5) FOR YOU ========== -->
+  <div style="padding:0 20px 8px;">
+    <div style="display:inline-block;font-family:Consolas,monospace;font-size:12px;color:#1a1304;background:#FFB900;padding:4px 10px;font-weight:700;letter-spacing:.04em;margin-bottom:14px;">// FOR YOU</div>
+    <h2 style="font-size:24px;margin:0 0 14px;color:#fff;">이런 분께 추천합니다</h2>
+    <ul style="margin:0;padding-left:20px;color:#e8ecf8;">
+      <li>Microsoft Build 2026이 궁금했지만 전부 챙겨보기 부담스러웠던 분</li>
+      <li>AI / Agent를 “직접 만져보고” 싶은 분</li>
+      <li>코드 없이 AI로 업무를 바꿔보고 싶은 비개발자</li>
+      <li>같은 관심사를 가진 사람들과 가볍게 이야기 나누고 싶은 분</li>
+      <li>MS MVP · 커뮤니티 리더와 직접 만나보고 싶은 분</li>
+    </ul>
+  </div>
+
+  <hr style="border:0;border-top:1px dashed #1f2438;margin:36px 20px;" />
+
+  <!-- ========== 6) SPEAKERS ========== -->
+  <div style="padding:0 20px 8px;">
+    <div style="display:inline-block;font-family:Consolas,monospace;font-size:12px;color:#fff;background:#F25022;padding:4px 10px;font-weight:700;letter-spacing:.04em;margin-bottom:14px;">// SPEAKERS</div>
+    <h2 style="font-size:24px;margin:0 0 14px;color:#fff;">발표자 <span style="color:#FFB900;">8명</span></h2>
+    <p style="color:#9aa3bd;margin:0 0 20px;">카드 순서는 등록 순이며, 발표 순서가 아닙니다. 세부 세션·주제는 확정 시 카드에 추가됩니다.</p>
+
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;">
+      <thead>
+        <tr style="background:#1a1f33;">
+          <th style="padding:10px 12px;text-align:left;color:#9aa3bd;font-size:12px;font-family:Consolas,monospace;border:1px solid #1f2438;width:40px;">#</th>
+          <th style="padding:10px 12px;text-align:left;color:#9aa3bd;font-size:12px;font-family:Consolas,monospace;border:1px solid #1f2438;">발표자</th>
+          <th style="padding:10px 12px;text-align:left;color:#9aa3bd;font-size:12px;font-family:Consolas,monospace;border:1px solid #1f2438;">소속</th>
+          <th style="padding:10px 12px;text-align:left;color:#9aa3bd;font-size:12px;font-family:Consolas,monospace;border:1px solid #1f2438;">배지</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:10px 12px;border:1px solid #1f2438;color:#fff;">1</td><td style="padding:10px 12px;border:1px solid #1f2438;color:#fff;font-weight:700;">김훈동</td><td style="padding:10px 12px;border:1px solid #1f2438;color:#cfd5e8;">Microsoft</td><td style="padding:10px 12px;border:1px solid #1f2438;"><span style="font-family:Consolas,monospace;font-size:11px;padding:2px 8px;background:rgba(255,185,0,.15);color:#FFB900;border:1px solid rgba(255,185,0,.4);">MVP</span></td></tr>
+        <tr><td style="padding:10px 12px;border:1px solid #1f2438;color:#fff;">2</td><td style="padding:10px 12px;border:1px solid #1f2438;color:#fff;font-weight:700;">전대호</td><td style="padding:10px 12px;border:1px solid #1f2438;color:#cfd5e8;">Microsoft</td><td style="padding:10px 12px;border:1px solid #1f2438;"><span style="font-family:Consolas,monospace;font-size:11px;padding:2px 8px;background:rgba(127,186,0,.15);color:#7FBA00;border:1px solid rgba(127,186,0,.4);margin-right:4px;">MCT</span><span style="font-family:Consolas,monospace;font-size:11px;padding:2px 8px;background:rgba(255,185,0,.15);color:#FFB900;border:1px solid rgba(255,185,0,.4);">MVP</span></td></tr>
+        <tr><td style="padding:10px 12px;border:1px solid #1f2438;color:#fff;">3</td><td style="padding:10px 12px;border:1px solid #1f2438;color:#fff;font-weight:700;">이보라</td><td style="padding:10px 12px;border:1px solid #1f2438;color:#cfd5e8;">Microsoft</td><td style="padding:10px 12px;border:1px solid #1f2438;"><span style="font-family:Consolas,monospace;font-size:11px;padding:2px 8px;background:rgba(255,185,0,.15);color:#FFB900;border:1px solid rgba(255,185,0,.4);">MVP</span></td></tr>
+        <tr><td style="padding:10px 12px;border:1px solid #1f2438;color:#fff;">4</td><td style="padding:10px 12px;border:1px solid #1f2438;color:#fff;font-weight:700;">이영빈</td><td style="padding:10px 12px;border:1px solid #1f2438;color:#cfd5e8;">Microsoft</td><td style="padding:10px 12px;border:1px solid #1f2438;"><span style="font-family:Consolas,monospace;font-size:11px;padding:2px 8px;background:rgba(242,80,34,.15);color:#F25022;border:1px solid rgba(242,80,34,.4);">Microsoft</span></td></tr>
+        <tr><td style="padding:10px 12px;border:1px solid #1f2438;color:#fff;">5</td><td style="padding:10px 12px;border:1px solid #1f2438;color:#fff;font-weight:700;">윤영미</td><td style="padding:10px 12px;border:1px solid #1f2438;color:#cfd5e8;">Planner</td><td style="padding:10px 12px;border:1px solid #1f2438;"><span style="font-family:Consolas,monospace;font-size:11px;padding:2px 8px;background:rgba(195,155,255,.15);color:#c39bff;border:1px solid rgba(195,155,255,.4);">기획자</span></td></tr>
+        <tr><td style="padding:10px 12px;border:1px solid #1f2438;color:#fff;">6</td><td style="padding:10px 12px;border:1px solid #1f2438;color:#fff;font-weight:700;">유승호</td><td style="padding:10px 12px;border:1px solid #1f2438;color:#cfd5e8;">Microsoft</td><td style="padding:10px 12px;border:1px solid #1f2438;"><span style="font-family:Consolas,monospace;font-size:11px;padding:2px 8px;background:rgba(242,80,34,.15);color:#F25022;border:1px solid rgba(242,80,34,.4);">Microsoft</span></td></tr>
+        <tr><td style="padding:10px 12px;border:1px solid #1f2438;color:#fff;">7</td><td style="padding:10px 12px;border:1px solid #1f2438;color:#fff;font-weight:700;">진미나</td><td style="padding:10px 12px;border:1px solid #1f2438;color:#cfd5e8;">Microsoft</td><td style="padding:10px 12px;border:1px solid #1f2438;"><span style="font-family:Consolas,monospace;font-size:11px;padding:2px 8px;background:rgba(127,186,0,.15);color:#7FBA00;border:1px solid rgba(127,186,0,.4);margin-right:4px;">MCT</span><span style="font-family:Consolas,monospace;font-size:11px;padding:2px 8px;background:rgba(255,185,0,.15);color:#FFB900;border:1px solid rgba(255,185,0,.4);">MVP</span></td></tr>
+        <tr><td style="padding:10px 12px;border:1px solid #1f2438;color:#fff;">8</td><td style="padding:10px 12px;border:1px solid #1f2438;color:#fff;font-weight:700;">TBD</td><td style="padding:10px 12px;border:1px solid #1f2438;color:#cfd5e8;">Microsoft</td><td style="padding:10px 12px;border:1px solid #1f2438;"><span style="font-family:Consolas,monospace;font-size:11px;padding:2px 8px;background:rgba(242,80,34,.15);color:#F25022;border:1px solid rgba(242,80,34,.4);">Microsoft</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr style="border:0;border-top:1px dashed #1f2438;margin:36px 20px;" />
+
+  <!-- ========== 7) SPONSOR ========== -->
+  <div style="padding:0 20px 8px;">
+    <div style="display:inline-block;font-family:Consolas,monospace;font-size:12px;color:#0c1020;background:#7FBA00;padding:4px 10px;font-weight:700;letter-spacing:.04em;margin-bottom:14px;">// SPONSOR</div>
+    <h2 style="font-size:24px;margin:0 0 14px;color:#fff;">후원사</h2>
+    <p style="color:#9aa3bd;margin:0 0 16px;">장소·운영 지원에 함께해주시는 파트너입니다.</p>
+
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="background:#131726;border:1px solid #1f2438;">
+      <tr>
+        <td style="padding:18px 24px;vertical-align:middle;">
+          <!-- ↓↓↓ Microsoft 로고를 이벤터스에 업로드 후 URL 교체 ↓↓↓ -->
+          <img src="MS로고_업로드후_URL_교체" alt="Microsoft Korea"
+               style="height:48px;width:auto;background:#fff;padding:6px 10px;display:block;border:0;" />
+        </td>
+        <td style="padding:18px 24px 18px 0;vertical-align:middle;">
+          <div style="font-weight:800;font-size:18px;color:#fff;">Microsoft Korea</div>
+          <div style="color:#9aa3bd;font-size:13px;">장소 / 운영 협력</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <hr style="border:0;border-top:1px dashed #1f2438;margin:36px 20px;" />
+
+  <!-- ========== 8) CHECK ========== -->
+  <div style="padding:0 20px 8px;">
+    <div style="display:inline-block;font-family:Consolas,monospace;font-size:12px;color:#1a1304;background:#FFB900;padding:4px 10px;font-weight:700;letter-spacing:.04em;margin-bottom:14px;">// CHECK</div>
+    <h2 style="font-size:24px;margin:0 0 14px;color:#fff;">참가 전 꼭 확인해주세요</h2>
+    <ul style="margin:0;padding-left:20px;color:#e8ecf8;">
+      <li>본 행사는 <strong style="color:#FFB900;">오프라인 전용</strong>으로 진행됩니다. 온라인 중계는 없습니다.</li>
+      <li><strong style="color:#FFB900;">개인 노트북을 꼭 지참</strong>해주세요. 일부 핸즈온 세션이 포함될 수 있습니다.</li>
+      <li>macOS 사용자는 Safari 외에 <strong style="color:#FFB900;">Edge / Chrome 설치</strong>를 권장드립니다.</li>
+      <li><strong style="color:#FFB900;">주차는 제공되지 않습니다.</strong> 대중교통 이용을 권장드립니다.</li>
+      <li>행사 전일, 신청하신 이메일로 안내 메일이 발송됩니다.</li>
+      <li>일부 일정/세션은 주최측 사정에 따라 변경될 수 있습니다.</li>
+    </ul>
+  </div>
+
+  <hr style="border:0;border-top:1px dashed #1f2438;margin:36px 20px;" />
+
+  <!-- ========== 9) DIRECTIONS ========== -->
+  <div style="padding:0 20px 8px;">
+    <div style="display:inline-block;font-family:Consolas,monospace;font-size:12px;color:#04222e;background:#00A4EF;padding:4px 10px;font-weight:700;letter-spacing:.04em;margin-bottom:14px;">// DIRECTIONS</div>
+    <h2 style="font-size:24px;margin:0 0 14px;color:#fff;">오시는 길</h2>
+    <ul style="margin:0;padding-left:20px;color:#e8ecf8;">
+      <li>주소: 서울 종로구 종로1길 50 (케이트윈타워 A동) 13층 제주룸</li>
+      <li>가장 가까운 지하철: 광화문역 / 종각역</li>
+      <li>주차: 미제공 (대중교통 권장)</li>
+    </ul>
+  </div>
+
+  <hr style="border:0;border-top:1px dashed #1f2438;margin:36px 20px;" />
+
+  <!-- ========== 10) REFUND ========== -->
+  <div style="padding:0 20px 8px;">
+    <div style="display:inline-block;font-family:Consolas,monospace;font-size:12px;color:#fff;background:#F25022;padding:4px 10px;font-weight:700;letter-spacing:.04em;margin-bottom:14px;">// REFUND</div>
+    <h2 style="font-size:24px;margin:0 0 14px;color:#fff;">취소 및 환불</h2>
+    <ul style="margin:0;padding-left:20px;color:#e8ecf8;">
+      <li>무료 행사이지만 좌석이 한정되어 있어, <strong style="color:#FFB900;">참석이 어려운 경우 반드시 직접 취소</strong>를 부탁드립니다.</li>
+      <li>취소 시 대기자가 자동으로 등록 처리됩니다.</li>
+      <li>이메일/메시지 취소 요청 대신 <strong style="color:#FFB900;">이벤터스 마이페이지</strong>에서 직접 취소해주세요.</li>
+    </ul>
+  </div>
+
+  <!-- ========== 11) CTA ========== -->
+  <div style="margin:36px 20px 20px;border:1px solid #FFB900;background:#131726;padding:28px 20px;text-align:center;">
+    <h2 style="margin:0 0 10px;font-size:24px;color:#fff;">6월 14일(일), 서울에서 만나요</h2>
+    <p style="color:#9aa3bd;margin:0 0 18px;">좌석이 한정되어 있어 <strong style="color:#fff;">선착순 마감</strong>될 수 있습니다.</p>
+    <div style="display:inline-block;padding:12px 24px;background:#FFB900;color:#1a1304;font-weight:800;font-size:15px;">▶ 우측/하단의 신청하기 버튼을 눌러주세요</div>
+  </div>
+
+  <hr style="border:0;border-top:1px dashed #1f2438;margin:36px 20px;" />
+
+  <!-- ========== 12) FAQ ========== -->
+  <div style="padding:0 20px 28px;">
+    <div style="display:inline-block;font-family:Consolas,monospace;font-size:12px;color:#0c1020;background:#7FBA00;padding:4px 10px;font-weight:700;letter-spacing:.04em;margin-bottom:14px;">// FAQ</div>
+    <h2 style="font-size:24px;margin:0 0 14px;color:#fff;">자주 묻는 질문</h2>
+
+    <div style="background:#131726;border:1px solid #1f2438;padding:14px 18px;margin-bottom:8px;">
+      <div style="font-weight:700;color:#fff;margin-bottom:6px;">Q1. 이 행사는 누구나 참가할 수 있나요?</div>
+      <div style="color:#cfd5e8;">네. 개발자뿐 아니라 비개발자, 학생, 기획자 등 AI에 관심 있는 누구나 참가하실 수 있습니다.</div>
+    </div>
+    <div style="background:#131726;border:1px solid #1f2438;padding:14px 18px;margin-bottom:8px;">
+      <div style="font-weight:700;color:#fff;margin-bottom:6px;">Q2. 참가비가 있나요?</div>
+      <div style="color:#cfd5e8;">무료 행사입니다. 다만 좌석이 한정되어 있어 신청은 선착순으로 마감될 수 있습니다.</div>
+    </div>
+    <div style="background:#131726;border:1px solid #1f2438;padding:14px 18px;margin-bottom:8px;">
+      <div style="font-weight:700;color:#fff;margin-bottom:6px;">Q3. 노트북은 꼭 가져가야 하나요?</div>
+      <div style="color:#cfd5e8;">일부 핸즈온(실습) 세션이 포함될 예정이므로 <strong style="color:#FFB900;">개인 노트북 지참을 권장</strong>드립니다. 노트북 대여는 제공되지 않습니다.</div>
+    </div>
+    <div style="background:#131726;border:1px solid #1f2438;padding:14px 18px;margin-bottom:8px;">
+      <div style="font-weight:700;color:#fff;margin-bottom:6px;">Q4. 비개발자도 따라갈 수 있는 내용인가요?</div>
+      <div style="color:#cfd5e8;">네. “AI 놀이터”라는 콘셉트에 맞춰 비개발자도 즐길 수 있는 세션을 함께 구성합니다. Copilot Studio, Power Platform 등 코드 없이 사용할 수 있는 도구도 다룹니다.</div>
+    </div>
+    <div style="background:#131726;border:1px solid #1f2438;padding:14px 18px;margin-bottom:8px;">
+      <div style="font-weight:700;color:#fff;margin-bottom:6px;">Q5. 세션 상세 내용은 언제 공개되나요?</div>
+      <div style="color:#cfd5e8;">Microsoft Build 본 행사 종료 후 공식 자료가 공개되는 시점부터 순차적으로 공개됩니다. 공개 시점은 본 페이지의 “공지/안내”를 통해 알려드립니다.</div>
+    </div>
+    <div style="background:#131726;border:1px solid #1f2438;padding:14px 18px;margin-bottom:8px;">
+      <div style="font-weight:700;color:#fff;margin-bottom:6px;">Q6. 발표자는 누구인가요?</div>
+      <div style="color:#cfd5e8;">김훈동(MVP), 전대호(MCT, MVP), 이보라(MVP), 이영빈(Microsoft), 윤영미(기획자), 유승호(Microsoft), 진미나(MCT, MVP), TBD(Microsoft) — 총 8명입니다.</div>
+    </div>
+    <div style="background:#131726;border:1px solid #1f2438;padding:14px 18px;margin-bottom:8px;">
+      <div style="font-weight:700;color:#fff;margin-bottom:6px;">Q7. 온라인 중계도 있나요?</div>
+      <div style="color:#cfd5e8;">없습니다. 본 행사는 <strong style="color:#FFB900;">오프라인 전용</strong>으로 진행됩니다.</div>
+    </div>
+    <div style="background:#131726;border:1px solid #1f2438;padding:14px 18px;margin-bottom:8px;">
+      <div style="font-weight:700;color:#fff;margin-bottom:6px;">Q8. 장소가 어디인가요? 주차는 가능한가요?</div>
+      <div style="color:#cfd5e8;">서울 종로구 종로1길 50, 한국 마이크로소프트 13층 제주룸입니다. <strong style="color:#FFB900;">주차는 제공되지 않으며</strong>, 광화문역/종각역에서 도보 이용 가능합니다.</div>
+    </div>
+    <div style="background:#131726;border:1px solid #1f2438;padding:14px 18px;margin-bottom:8px;">
+      <div style="font-weight:700;color:#fff;margin-bottom:6px;">Q9. macOS를 쓰는데 준비할 게 있나요?</div>
+      <div style="color:#cfd5e8;">일부 Microsoft 서비스는 Safari에서 정상 작동하지 않을 수 있습니다. <strong style="color:#FFB900;">Edge 또는 Chrome 설치</strong>를 권장드립니다.</div>
+    </div>
+    <div style="background:#131726;border:1px solid #1f2438;padding:14px 18px;margin-bottom:8px;">
+      <div style="font-weight:700;color:#fff;margin-bottom:6px;">Q10. 사정이 생겨 참석이 어려울 경우 어떻게 하나요?</div>
+      <div style="color:#cfd5e8;">이벤터스 “마이페이지 → 신청 행사”에서 <strong style="color:#FFB900;">직접 취소</strong>해주세요. 이메일/메시지 요청은 처리되지 않을 수 있으며, 취소 시 대기자에게 자동으로 자리가 넘어갑니다.</div>
+    </div>
+    <div style="background:#131726;border:1px solid #1f2438;padding:14px 18px;margin-bottom:8px;">
+      <div style="font-weight:700;color:#fff;margin-bottom:6px;">Q11. 행사 안내 메일은 언제 받게 되나요?</div>
+      <div style="color:#cfd5e8;">행사 약 1주일 전 및 행사 전일에 신청하신 이메일로 안내 메일이 발송됩니다. 스팸함도 함께 확인해주세요.</div>
+    </div>
+    <div style="background:#131726;border:1px solid #1f2438;padding:14px 18px;margin-bottom:8px;">
+      <div style="font-weight:700;color:#fff;margin-bottom:6px;">Q12. 사진/영상 촬영은 어떻게 하나요?</div>
+      <div style="color:#cfd5e8;">운영진의 공식 촬영이 있을 수 있으며, 참가자 개인 촬영 시에는 <strong style="color:#FFB900;">타인의 초상권을 존중</strong>해주세요. 행사 사진 일부는 후기 공유 목적으로 사용될 수 있습니다.</div>
+    </div>
+  </div>
+
+  <!-- 푸터 픽셀라인 -->
+  <div style="height:6px;background:#F25022;width:100%;"></div>
+  <div style="height:6px;background:#7FBA00;width:100%;"></div>
+  <div style="height:6px;background:#00A4EF;width:100%;"></div>
+  <div style="height:6px;background:#FFB900;width:100%;"></div>
+
+  <p style="text-align:center;color:#9aa3bd;font-size:12px;padding:14px;margin:0;font-family:Consolas,monospace;">
+    // BUILD <span style="color:#FFB900;">//</span><span style="color:#00A4EF;">LOCALHOST</span> : SEOUL — 2026.06.14
+  </p>
+
+</div>
